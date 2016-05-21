@@ -10,7 +10,7 @@ feature "User can logout" do
 
     click_on "Log Out"
 
-    expect(page).to have_content("You've successfully logged out! ")
+    expect(page).to have_content("Log In")
 
   end
 end
