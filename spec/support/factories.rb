@@ -8,4 +8,10 @@ FactoryGirl.define do
   factory :ingredient do
     sequence(:name) {|n| "#{n}garlic"}
   end
+
+  factory :user do
+    sequence(:username) {|n| "jones#{n}"}
+    sequence(:email) {|n| "jones#{n}@email.com"}
+    sequence(:password) { "password"}
+  end
 end

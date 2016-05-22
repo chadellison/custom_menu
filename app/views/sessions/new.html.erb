@@ -1,0 +1,22 @@
+<div class="form-spacing">
+  <div align="center>
+    <div class="pad" >
+      <h1>Log In</h1>
+      <div class="form-group" >
+        <%= form_for(:session, url: login_path) do |f| %>
+          <div class="form-group" >
+            <%= f.text_field :email, placeholder: "Email", class: "form-control" %><br>
+            <div class="form-group" >
+              <%= f.password_field :password, placeholder: "Password", class: "form-control" %><br>
+              <div class="login" >
+                <%= f.submit "Log In" %>
+              </div>
+            <% end %>
+            </div>
+          </div>
+      </div>
+      <h4> New around here? <%= link_to "Create an account with us", signup_path %></h4>
+    </div>
+  </div>
+</div>
+

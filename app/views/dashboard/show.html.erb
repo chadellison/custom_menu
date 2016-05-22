@@ -1,4 +1,18 @@
 <%= flash[:success] %>
-<h3>Logged in as <%= @user.username %></h3>
 <%= gravatar_for @user %>
 <%= @user.username %>
+<h4><%= @user.username.capitalize %> Dashboard</h4>
+<h4>Logged in as <%= @user.username.capitalize %></h4>
+
+<p> <%=  @user.email %></p>
+
+<br>
+<br>
+<br>
+
+<h4>Your Food Allergies  </h4>
+<ol>
+  <% @user.food_allergies.each do |allergy| %>
+    <li><%= allergy.name %></li>
+    <% end %>
+</ol>
