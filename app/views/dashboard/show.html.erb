@@ -1,2 +1,4 @@
 <%= flash[:success] %>
-<h3>Logged in as <%= @user.username %></h3.
+<h3>Logged in as <%= @user.username %></h3>
+<%= gravatar_for @user %>
+<%= @user.username %>
