@@ -13,7 +13,7 @@ feature "User can sign in and see profile page" do
 
     click_on "Profile"
 
-    expect(page).to have_content("#{user.username.capitalize} Dashboard")
+    expect(page).to have_content("#{user.username.capitalize}'s Dashboard")
     expect(page).to have_content("#{user.email}")
     expect(page).to have_content("#{user.food_allergies.first.name}")
     expect(page).to have_content("#{user.food_allergies.last.name}")
