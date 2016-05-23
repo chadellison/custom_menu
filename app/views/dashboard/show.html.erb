@@ -1,7 +1,6 @@
-<%= flash[:success] %>
 <%= gravatar_for @user %>
 <%= @user.username %>
-<h4><%= @user.username.capitalize %> Dashboard</h4>
+<h4><%= @user.username.capitalize %>'s Dashboard</h4>
 <h4>Logged in as <%= @user.username.capitalize %></h4>
 
 <p> <%=  @user.email %></p>
@@ -12,7 +11,9 @@
 
 <h4>Your Food Allergies  </h4>
 <ol>
-  <% @user.food_allergies.each do |allergy| %>
+  <% @food_allergies.each do |allergy| %>
     <li><%= allergy.name %></li>
     <% end %>
 </ol>
+
+<%= link_to "Edit Profile", edit_dashboard_path(@user) %>

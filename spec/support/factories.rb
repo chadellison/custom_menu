@@ -14,4 +14,9 @@ FactoryGirl.define do
     sequence(:email) {|n| "jones#{n}@email.com"}
     sequence(:password) { "password"}
   end
+
+  factory :food_allergy do
+    sequence(:name) { |n| "shrimp#{n}" }
+  end
+
 end
